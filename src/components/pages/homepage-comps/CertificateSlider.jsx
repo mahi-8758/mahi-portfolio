@@ -57,8 +57,8 @@ const CertificateSlider = () => {
     };
 
     return (
-        <section name='Education' className='relative w-full py-16 text-slate-800 dark:text-white transition-colors duration-300 min-h-screen'>
-            <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
+        <section name='Education' className='relative w-full py-12 md:py-16 text-slate-800 dark:text-white transition-colors duration-300'>
+            <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full'>
 
                 <div className='mb-6'>
                     <h2 className='text-4xl font-bold inline border-b-4 border-emerald-500/60 dark:border-primary-color/40 text-slate-900 dark:text-white sm:text-5xl pb-1'>
@@ -69,7 +69,7 @@ const CertificateSlider = () => {
                     </p>
                 </div>
 
-                <div className='mb-10'>
+                <div>
                     <Slider {...settings} className="w-[90%] lg:w-full mx-auto">
                         {certificates.map((cert, index) => (
                             <div 
@@ -92,11 +92,13 @@ const CertificateSlider = () => {
                     </Slider>
                 </div>
 
-            </div>
+                <div className="flex justify-center mt-8">
+                    <ScrollLink to="Contact" smooth duration={500} className='cursor-pointer hover:text-emerald-500 dark:hover:text-primary-color'>
+                        <i className='bx bx-chevron-down text-5xl text-slate-400 dark:text-gray-400 animate-bounce hover:text-emerald-500 dark:hover:text-primary-color'></i>
+                    </ScrollLink>
+                </div>
 
-            <ScrollLink to="Contact" smooth duration={500} className='absolute bottom-2 -left-full md:left-1/2 md:-translate-x-1/2 cursor-pointer hover:text-emerald-500 dark:hover:text-primary-color'>
-                <i className='bx bx-chevron-down text-6xl text-slate-400 dark:text-gray-400 animate-bounce hover:text-emerald-500 dark:hover:text-primary-color'></i>
-            </ScrollLink>
+            </div>
 
             <CertificateModal selectedImage={selectedImage} setSelectedImage={setSelectedImage} />
         </section>
