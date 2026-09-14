@@ -19,9 +19,7 @@ dist-ssr
 .env.development
 .env.production
 
-# Personal Profile Photos & Confidential Assets
-public/images/fullsizeimg.jpg
-public/images/imgaboutme.jpg
+# Confidential Assets
 public/FullStack_Developer_MahiKumar.pdf
 
 # Editor directories and files
